@@ -56,6 +56,8 @@ class Version:
         return Version(ver, id, md5, files, signature)
 
     def __init__(self, ver, id, md5, files, signature):
+        if ver != 'ver5':
+            print('Unsupported game.version file, will be implemented later')
         self.ver = ver
         self.id = id
         self.files = files
